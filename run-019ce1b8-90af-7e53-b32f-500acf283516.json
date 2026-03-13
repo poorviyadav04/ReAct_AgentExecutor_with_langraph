@@ -1,0 +1,240 @@
+{
+  "inputs": {
+    "messages": [
+      {
+        "additional_kwargs": {},
+        "content": "What is the temperature in Delhi? List it and then triple it",
+        "id": "574a551d-d3da-4776-83f0-3014bfb14c36",
+        "response_metadata": {},
+        "type": "human"
+      }
+    ]
+  },
+  "outputs": {
+    "messages": [
+      {
+        "additional_kwargs": {},
+        "content": "What is the temperature in Delhi? List it and then triple it",
+        "id": "574a551d-d3da-4776-83f0-3014bfb14c36",
+        "response_metadata": {},
+        "type": "human"
+      },
+      {
+        "additional_kwargs": {},
+        "content": [
+          {
+            "text": "\n\nLet me first search for the current temperature in Delhi.",
+            "type": "text"
+          },
+          {
+            "caller": {
+              "type": "direct"
+            },
+            "id": "toolu_01LUweTfc29ASrFxSiUAy97o",
+            "input": {
+              "query": "current temperature in Delhi today",
+              "search_depth": "basic",
+              "topic": "general"
+            },
+            "name": "tavily_search",
+            "type": "tool_use"
+          }
+        ],
+        "id": "lc_run--019ce1b8-910f-7710-ade2-7973261cc6fd-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "container": null,
+          "id": "msg_01EAec3oyu7EHPA9KkczkSvn",
+          "model": "claude-opus-4-6",
+          "model_name": "claude-opus-4-6",
+          "model_provider": "anthropic",
+          "stop_reason": "tool_use",
+          "stop_sequence": null,
+          "usage": {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "input_tokens": 2272,
+            "output_tokens": 107,
+            "server_tool_use": null,
+            "service_tier": "standard"
+          }
+        },
+        "tool_calls": [
+          {
+            "args": {
+              "query": "current temperature in Delhi today",
+              "search_depth": "basic",
+              "topic": "general"
+            },
+            "id": "toolu_01LUweTfc29ASrFxSiUAy97o",
+            "name": "tavily_search",
+            "type": "tool_call"
+          }
+        ],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_creation": 0,
+            "cache_read": 0,
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "input_tokens": 2272,
+          "output_tokens": 107,
+          "total_tokens": 2379
+        }
+      },
+      {
+        "additional_kwargs": {},
+        "content": "{\"query\": \"current temperature in Delhi today\", \"follow_up_questions\": null, \"answer\": null, \"images\": [], \"results\": [{\"url\": \"https://www.ndtv.com/weather/delhi-weather-forecast-today\", \"title\": \"Delhi Weather Forecast 2026 : Today's Temperature, Hourly ... - NDTV\", \"content\": \"Today's weather forecast in Delhi is Partly cloudy. High 34°C, Low 17°C . Currently 32°C. Stay updated for accurate weather information in Delhi.\", \"score\": 0.8682137, \"raw_content\": null}], \"response_time\": 0.75, \"request_id\": \"c3bf8a52-6c8e-4bcf-8bde-ef2f9d1b8d8f\"}",
+        "id": "381fad1c-ab46-44c2-9c31-03e1aff35f44",
+        "name": "tavily_search",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "toolu_01LUweTfc29ASrFxSiUAy97o",
+        "type": "tool"
+      },
+      {
+        "additional_kwargs": {},
+        "content": [
+          {
+            "text": "The current temperature in Delhi is **32°C** (with a high of 34°C and a low of 17°C, partly cloudy). Now let me triple that value:",
+            "type": "text"
+          },
+          {
+            "caller": {
+              "type": "direct"
+            },
+            "id": "toolu_014ZD3Y4jWafXhNsAhy6YMxn",
+            "input": {
+              "num": 32
+            },
+            "name": "triple",
+            "type": "tool_use"
+          }
+        ],
+        "id": "lc_run--019ce1b8-a89c-7a91-bb10-2329f32aa752-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "container": null,
+          "id": "msg_01TtBAtQjNbG2a4JrBA75jzM",
+          "model": "claude-opus-4-6",
+          "model_name": "claude-opus-4-6",
+          "model_provider": "anthropic",
+          "stop_reason": "tool_use",
+          "stop_sequence": null,
+          "usage": {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "input_tokens": 2584,
+            "output_tokens": 92,
+            "server_tool_use": null,
+            "service_tier": "standard"
+          }
+        },
+        "tool_calls": [
+          {
+            "args": {
+              "num": 32
+            },
+            "id": "toolu_014ZD3Y4jWafXhNsAhy6YMxn",
+            "name": "triple",
+            "type": "tool_call"
+          }
+        ],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_creation": 0,
+            "cache_read": 0,
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "input_tokens": 2584,
+          "output_tokens": 92,
+          "total_tokens": 2676
+        }
+      },
+      {
+        "additional_kwargs": {},
+        "content": "96.0",
+        "id": "977af9f0-6040-44d7-8b3c-3d07596a51fa",
+        "name": "triple",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "toolu_014ZD3Y4jWafXhNsAhy6YMxn",
+        "type": "tool"
+      },
+      {
+        "additional_kwargs": {},
+        "content": "Here are the results:\n\n- **Current Temperature in Delhi:** 32°C\n- **Tripled:** 32 × 3 = **96°C**\n\n(That tripled temperature would be close to boiling water — definitely not a pleasant forecast! 🥵)",
+        "id": "lc_run--019ce1b8-b222-7060-a070-5959f92de5ee-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "container": null,
+          "id": "msg_01HB3qKyMVVQgKC2fBAY6rg3",
+          "model": "claude-opus-4-6",
+          "model_name": "claude-opus-4-6",
+          "model_provider": "anthropic",
+          "stop_reason": "end_turn",
+          "stop_sequence": null,
+          "usage": {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "input_tokens": 2691,
+            "output_tokens": 65,
+            "server_tool_use": null,
+            "service_tier": "standard"
+          }
+        },
+        "tool_calls": [],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_creation": 0,
+            "cache_read": 0,
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "input_tokens": 2691,
+          "output_tokens": 65,
+          "total_tokens": 2756
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "LANGCHAIN_TRACING": "true",
+    "ls_run_depth": 0,
+    "revision_id": "b13c1db-dirty"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "b328dd79-1d90-4625-9cba-de52e3ef5cde"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "2e1f7a96-ac51-47e4-bd55-301ec4d7bd04"
+    },
+    "tracing_project": {
+      "id": "a92fbe9e-9b09-4935-a713-f69ab543bf1b",
+      "name": "React Function Calling"
+    }
+  }
+}
